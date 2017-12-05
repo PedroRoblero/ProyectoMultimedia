@@ -102,8 +102,7 @@
 				</ul>
 			</li>
 			<li role="presentation" class="divider"></li>
-			<li><a href="pdf_completo.php"><svg class="glyph stroked app-window"><use xlink:href="#stroked-app-window"></use></svg>Genenrar PDF de Alumnos </a></li>
-      <li><a href="pdf_completo_dae.php"><svg class="glyph stroked app-window"><use xlink:href="#stroked-app-window"></use></svg>Genenrar PDF de Personal DAE </a></li>
+			
 			
 		</ul>
 

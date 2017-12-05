@@ -3,7 +3,7 @@
 include 'plantillatarjeta.php';
 
 require 'conexion_i.php'; 
-$rut=$_GET['id'];
+$rut=$_GET['RUT'];
 
 $query = "SELECT * FROM alumno where rut=$rut";
 $result= $mysqli->query($query);

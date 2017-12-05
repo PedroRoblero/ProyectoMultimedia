@@ -105,8 +105,7 @@ require 'conexion_i.php';
         </ul>
       </li>
       <li role="presentation" class="divider"></li>
-      <li><a href="pdf_completo.php"><svg class="glyph stroked app-window"><use xlink:href="#stroked-app-window"></use></svg>Genenrar PDF de Alumnos </a></li>
-      <li><a href="pdf_completo_dae.php"><svg class="glyph stroked app-window"><use xlink:href="#stroked-app-window"></use></svg>Genenrar PDF de Personal DAE </a></li>
+     
     </ul>
 
   </div><!--/.sidebar-->
@@ -128,6 +127,20 @@ require 'conexion_i.php';
             <input type="text" name="RUT" placeholder="RUT sin DV">
              <input type="submit" name="name" value="Buscar" class="btn btn-success"> 
             </form> <br>
+
+            <label for="" name="PROMO"    >Promocion:</label>
+            <form action="mostrar_alumno_promocion_no_dae.php" method="post">
+            <input type="number" name="PROMO" placeholder="Promocion">
+             <input type="submit" name="name" value="Buscar" class="btn btn-success"> 
+            </form> <br>
+  
+            <form action="mostrar_alumno_estado_no_dae.php" method="post">
+            <label for="" name="estado"    >Estado:</label>
+                <input type="radio" name="estado" value="1" checked> Activo 
+                  
+                  <input type="radio" name="estado" value="0"> Inactivo
+                  <input type="submit" value="Buscar" class="btn btn-success">
+            </form> <br>      
 
              <form action="mostrar_alumno_no_becado_carrera_dae.php" method="post">
             <label for="" name="carre"    >Carrera:</label>

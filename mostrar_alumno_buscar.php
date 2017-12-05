@@ -106,9 +106,7 @@
         </ul>
       </li>
       <li role="presentation" class="divider"></li>
-      <li><a href="pdf_completo.php"><svg class="glyph stroked app-window"><use xlink:href="#stroked-app-window"></use></svg>Genenrar PDF de Alumnos </a></li>
-      <li><a href="pdf_completo_dae.php"><svg class="glyph stroked app-window"><use xlink:href="#stroked-app-window"></use></svg>Genenrar PDF de Personal DAE </a></li>
-      <li><a href="pdf_completo_casino.php"><svg class="glyph stroked app-window"><use xlink:href="#stroked-app-window"></use></svg>Genenrar PDF de Personal Casino </a></li>
+      
     </ul>
 
   </div><!--/.sidebar-->
@@ -161,7 +159,7 @@
         <td><?php echo $fila['estado']; ?></td>
       
        
-        <td><a href="generador_tarjeta_pdf.php?id=<?php echo $fila['rut'] ?>" class="btn btn-info btn-xs"> Generar Tarjeta</td>
+        <td><a href="insertador_tarjeta.php?id=<?php echo $fila['rut'] ?>" class="btn btn-info btn-xs"> Generar Tarjeta</td>
             <td><a href="mostrar_todo.php?id=<?php echo $fila['rut'] ?>" class="btn btn-default btn-xs"> Mostrar Todo</td>
         <td><a href="final_beca.php?id=<?php echo $fila['id_alumno'] ?>" class="btn btn-success btn-xs"> Activar Beca</td>
           <td><a href="desactivar_beca.php?id=<?php echo $fila['id_alumno'] ?>" class="btn btn-danger btn-xs"> Desactivar Beca</td>

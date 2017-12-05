@@ -72,7 +72,7 @@
 		
 		<ul class="nav menu">
 			<li><a href="mostrar_alumno_alumno.php"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Mostrar Mis Datos</a></li>
-			<li><a href="mostrar_estado_tarjeta_alumno.php"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Desactivar/Activar Tarjeta</a></li>
+			<li><a href="desactivar_tarjeta_alumno.php"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Desactivar/Activar Tarjeta</a></li>
 			
 		
 
@@ -113,10 +113,41 @@
 			
 				<div class="container-fluid">
 					
+					<?php
+					require 'conexion_i.php';
+					$query = "SELECT id_alumno FROM usuario  WHERE user = '".$_SESSION['usuario']['user']."'";
+					$result=$mysqli->query($query);
+					foreach($result as $fila){
+					$b = $fila['id_alumno'];
+				    }
+
+				    $query2 = "SELECT estado_tarjeta FROM tarjeta WHERE id_alumno = $b";
+				    $result2=$mysqli->query($query2);
+				    foreach($result2 as $fila){
+					$e = $fila['estado_tarjeta'];
+				    }
+
+				    if ($result2->num_rows == 1 ) {
+					  	if ($e==1) {
+					  		echo "<h2>Su tarjeta se encuentra Activada</h2>";
+					  	} else{
+					  		echo "<h2>Su tarjeta se encuentra Desactivada</h2>";
+					  	}
+					 } else {
+					 	echo "<h2>Genere su tarjeta por favor.</h2>";
+					 }
 					
-			
+					 foreach($result as $fila){
+					
+				    
 
+					?>
 
+					<table>
+					<td><a href="activar_tarjeta_alumno.php?id=<?php echo $fila['id_alumno'] ?>" class="btn btn-info btn-lg"> Activar Tarjeta </td> 
+        			<td><a href="desactivar_tarjeta_alumno.php?id=<?php echo $fila['id_alumno'] ?>" class="btn btn-danger btn-lg"> Desactivar tarjeta </td>
+					</table>
+					<?php  } ?>
 
 
 				</div>

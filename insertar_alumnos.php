@@ -48,7 +48,7 @@
 	$tamanio=10;
 	$level='M';
 	$framesize=3;
-	$contenido=$rut;
+	$contenido="http://192.168.0.12/roblero_brito/verificar_beca.php?id=$rut";
 	QRcode::png($contenido,$filename,$level,$tamanio,$framesize);
 	
 

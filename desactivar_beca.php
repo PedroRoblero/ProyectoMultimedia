@@ -8,8 +8,12 @@ $query = "UPDATE beca SET estado_beca=0  WHERE id_alumno='$id'";
 $result=$mysqli->query($query);
 
 if($result){
-
-	header ("Location: index_admin.php");
+	$query2 = "UPDATE tarjeta SET estado_tarjeta=0  WHERE id_alumno='$id'";
+	$result2=$mysqli->query($query2);
+	if ($result2){
+		header ("Location: index_admin.php");
+	}
+	
 }
 else{
 	echo "Insercion no exitosa";

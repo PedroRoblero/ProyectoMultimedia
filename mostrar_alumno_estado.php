@@ -16,7 +16,7 @@
               header('Location: index_funcionario.php');           
         } else if($_SESSION['usuario']['tipo_usuario'] == "secre"){
               header('Location: index_secre.php');           
-        } else if($_SESSION['usuario']['tipo_usuario'] == "asist_social"){
+        }  else if($_SESSION['usuario']['tipo_usuario'] == "asist_social"){
               header('Location: index_asist_social.php');           
           }
     }
@@ -130,11 +130,10 @@
     <thead>
 
         <?php
-          $CARRE = $_REQUEST['carre'];
-          $query="SELECT * FROM alumno WHERE carrera='$CARRE'";
+          $ESTADO = $_REQUEST['estado'];
+          $query="SELECT * FROM alumno WHERE estado=$ESTADO";
           $result= $mysqli-> query($query);
           ?>
-
       <tr>
         <th>ID</th>
         <th>RUT</th>
@@ -175,8 +174,7 @@
  </div> 
 </div>
 
-
-            <div class="modal fade" id="myModalalumno">
+          <div class="modal fade" id="myModalalumno">
                 <div class="modal-dialog modal-lg">
                   <div class="modal-content"> 
       

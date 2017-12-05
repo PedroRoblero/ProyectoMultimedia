@@ -160,7 +160,7 @@
 		<td><?php echo "<img src='".$fila['foto']."' width='50 px' height='50 px'>";?></td>
       
        
-        <td><a href="generador_tarjeta_pdf.php?id=<?php echo $fila['rut'] ?>" class="btn btn-info btn-xs"> Generar Tarjeta</td>
+        <td><a href="insertador_tarjeta.php?id=<?php echo $fila['rut'] ?>" class="btn btn-info btn-xs"> Generar Tarjeta</td>
        
          
 

@@ -108,9 +108,7 @@ require 'conexion_i.php';
         </ul>
       </li>
       <li role="presentation" class="divider"></li>
-      <li><a href="pdf_completo.php"><svg class="glyph stroked app-window"><use xlink:href="#stroked-app-window"></use></svg>Genenrar PDF de Alumnos </a></li>
-      <li><a href="pdf_completo_dae.php"><svg class="glyph stroked app-window"><use xlink:href="#stroked-app-window"></use></svg>Genenrar PDF de Personal DAE </a></li>
-      <li><a href="pdf_completo_casino.php"><svg class="glyph stroked app-window"><use xlink:href="#stroked-app-window"></use></svg>Genenrar PDF de Personal Casino </a></li>
+      
     </ul>
 
   </div><!--/.sidebar-->
@@ -126,12 +124,25 @@ require 'conexion_i.php';
       <div class="col-md-8">
       
           
-          <div class="container-fluid">
-
+          <div class="container">
+            <label for="" name="RUT"    >RUT:</label>
            <form action="mostrar_alumno_buscar.php" method="post">
             <input type="text" name="RUT" placeholder="RUT sin DV">
              <input type="submit" name="name" value="Buscar" class="btn btn-success"> 
             </form> <br>
+            <label for="" name="PROMO"    >Promocion:</label>
+            <form action="mostrar_alumno_promocion.php" method="post">
+            <input type="number" name="PROMO" placeholder="Promocion">
+             <input type="submit" name="name" value="Buscar" class="btn btn-success"> 
+            </form> <br>
+  
+            <form action="mostrar_alumno_estado.php" method="post">
+            <label for="" name="estado"    >Estado:</label>
+                <input type="radio" name="estado" value="1" checked> Activo 
+                  
+                  <input type="radio" name="estado" value="0"> Inactivo
+                  <input type="submit" value="Buscar" class="btn btn-success">
+            </form> <br>      
 
           <form action="mostrar_alumno_carrera.php" method="post">
             <label for="" name="carre"    >Carrera:</label>
@@ -179,7 +190,7 @@ require 'conexion_i.php';
         <td><?php echo $fila['estado']; ?></td>
      
    
-        <td><a href="generador_tarjeta_pdf.php?id=<?php echo $fila['rut'] ?>" class="btn btn-info btn-xs"> Generar Tarjeta</td>
+        <td><a href="insertador_tarjeta.php?id=<?php echo $fila['rut'] ?>" class="btn btn-info btn-xs"> Generar Tarjeta</td>
         <td><a href="mostrar_todo.php?id=<?php echo $fila['rut'] ?>" class="btn btn-default btn-xs"> Mostrar Todo</td>
           <td><a href="final_beca.php?id=<?php echo $fila['id_alumno'] ?>" class="btn btn-success btn-xs"> Activar Beca</td>
           <td><a href="desactivar_beca.php?id=<?php echo $fila['id_alumno'] ?>" class="btn btn-danger btn-xs"> Desactivar Beca</td>
@@ -191,6 +202,10 @@ require 'conexion_i.php';
     ?>
     </tbody>
   </table>
+          
+         <a href="pdf_completo.php" class="btn btn-info" >Generar PDF de Alumnos </a>
+         
+
  </div> 
 </div>
 

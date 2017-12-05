@@ -1,5 +1,5 @@
 <?php 
-	require 'conexion_i.php';
+require 'conexion_i.php';
 	session_start();
 	if(isset($_SESSION['usuario'])){
 
@@ -12,14 +12,13 @@
 			} else if($_SESSION['usuario']['tipo_usuario'] == "alumno"){
 				header('Location: index_alumno.php');	
 			} else if($_SESSION['usuario']['tipo_usuario'] == "funcionario"){
-              header('Location: index_funcionario.php');           
-        } else if($_SESSION['usuario']['tipo_usuario'] == "secre"){
+              header('Location: index_funcionario.php');      
+			} else if($_SESSION['usuario']['tipo_usuario'] == "secre"){
               header('Location: index_secre.php');           
-        } else if($_SESSION['usuario']['tipo_usuario'] == "asist_social"){
+        	} else if($_SESSION['usuario']['tipo_usuario'] == "asist_social"){
               header('Location: index_asist_social.php');           
         	}
-		}
-
+	}
 	} else {
 		header('Location: index.php');
 	}
@@ -61,7 +60,7 @@
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> <?php echo $_SESSION['usuario']['user'] ?> <span class="caret"></span></a>
 						<ul class="dropdown-menu" role="menu">
 						    <li><a href="cambiar_contraseña_admin_dae.php"><svg class="glyph stroked gear"><use xlink:href="#stroked-gear"></use></svg> Cambiar Contraseña</a></li> 
-							<li><a href="salir.php"><svg class="glyph stroked cancel"><use xlink:href="#stroked-cancel"></use></svg> salir</a></li>
+							<li><a href="salir.php"><svg class="glyph stroked cancel"><use xlink:href="#stroked-cancel"></use></svg> Salir</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -118,6 +117,54 @@
 			<div class="col-md-8">
 			
 				<div class="container-fluid">
+
+
+						 <table class="table">
+    <thead>
+
+        <?php
+          $PROMO = $_REQUEST['PROMO'];
+          $query="SELECT * FROM alumno a join beca b on a.id_alumno=b.id_alumno WHERE promocion=$PROMO and estado_beca=1";
+          $result= $mysqli-> query($query);
+          ?>
+      <tr>
+        <th>ID</th>
+        <th>RUT</th>
+        <th>DV</th>
+        <th>Nombre</th>
+        <th>Apellido Pat</th>
+
+        <th>Estado</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <?php
+            foreach($result as $fila){
+    ?> 
+      <tr>
+        <td><?php echo $fila['id_alumno']; ?></td>
+        <td><?php echo $fila['rut']; ?></td>
+        <td><?php echo $fila['dv']; ?></td>
+        <td><?php echo $fila['nombre']; ?></td>
+        <td><?php echo $fila['apellido_paterno']; ?></td>
+
+        <td><?php echo $fila['estado']; ?></td>
+      
+       
+
+          <td><a href="desactivar_beca.php?id=<?php echo $fila['id_alumno'] ?>" class="btn btn-danger btn-xs"> Desactivar Beca</td>
+       
+      </tr>
+     <?php }  
+    ?>
+    </tbody>
+  </table>
+ </div> 
+</div>
+
+
+
 					
 						<div class="modal fade" id="myModaldae">
     				<div class="modal-dialog modal-lg">
@@ -137,23 +184,23 @@
 			                  <input type="text"  name="rut" class="form-control" placeholder="Ingrese Rut" maxlength="8" required pattern="[0-9].{6,8}">
 			                  <small class="form-text text-muted">Ingrese RUT sin digito verificador.</small>
 			              </div>
-			              <div class="form-group col-md-6">
-                            <label>DV</label>
-                            <select class="form-control" id="sel1" name="dv" >
-                                <option>0</option>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                                <option>6</option>
-                                <option>7</option>
-                                <option>8</option>
-                                <option>9</option>
-                                <option>K</option>
-                            </select>
-                            <small class="form-text text-muted">Seleccione digito verificador.</small>
-                        </div>
+			             <div class="form-group col-md-6">
+					                  <label>DV</label>
+					                  <select class="form-control" id="sel1" name="dv" >
+					                      <option>0</option>
+					                      <option>1</option>
+					                      <option>2</option>
+					                      <option>3</option>
+					                      <option>4</option>
+					                      <option>5</option>
+					                      <option>6</option>
+					                      <option>7</option>
+					                      <option>8</option>
+					                      <option>9</option>
+					                      <option>K</option>
+					                  </select>
+					                  <small class="form-text text-muted">Seleccione digito verificador.</small>
+					              </div>
 			              <div class="form-group col-md-6">
 			                  <label>Nombre</label>
 			                  <input type="text" name="nombre" class="form-control" required placeholder="Nombre">
@@ -193,52 +240,7 @@
 			    </div>
 			  </div>
 			
-				<div class="table-responsive"></div>
-  <table class="table">
-    <thead>
 
-        <?php
-          $CARGO = $_REQUEST['cargo'];
-          $query="SELECT * FROM dae WHERE tipo_dae='$CARGO'";
-          $result= $mysqli-> query($query);
-          ?>
-
-      <tr>
-        <th>ID</th>
-        <th>RUT</th>
-        <th>DV</th>
-        <th>Nombre</th>
-        <th>Apellido Pat</th>
-        <th>Apellido Mat</th>
-        <th>Cargo</th>
-        <th>Correo</th>
-   
-      </tr>
-    </thead>
-    <tbody>
-      <?php
-            foreach($result as $fila){
-    ?> 
-      <tr>
-        <td><?php echo $fila['id_dae']; ?></td>
-        <td><?php echo $fila['rut']; ?></td>
-        <td><?php echo $fila['dv']; ?></td>
-        <td><?php echo $fila['nombre']; ?></td>
-        <td><?php echo $fila['apellido_pat']; ?></td>
-        <td><?php echo $fila['apellido_mat']; ?></td>
-        <td><?php echo $fila['tipo_dae']; ?></td>
-        <td><?php echo $fila['correo']; ?></td>
-     
-        <td><a href="modificar_dae_dae.php?id=<?php echo $fila['id_dae'] ?>" class="btn btn-warning btn-xs"> Modificar Funcionario</td>
-        <td><a href="eliminar_final_dae.php?id=<?php echo $fila['id_dae'] ?>" class="btn btn-danger btn-xs"> Eliminar Funcionario</td>
-
-      </tr>
-     <?php }  
-    ?>
-    </tbody>
-  </table>
- </div> 
-</div>
 
 
 

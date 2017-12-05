@@ -100,7 +100,7 @@
 				</ul>
 			</li>
 			<li role="presentation" class="divider"></li>
-			<li><a href="pdf_completo_casino.php"><svg class="glyph stroked app-window"><use xlink:href="#stroked-app-window"></use></svg>Genenrar PDF de Personal Casino </a></li>
+			
 		</ul>
 
 	</div><!--/.sidebar-->
