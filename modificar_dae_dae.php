@@ -76,7 +76,7 @@
 			<li><a href="mostrar_dae_dae.php"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Mostrar Personal DAE</a></li>
 			<li><a href="mostrar_alumnos_becados.php"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Mostrar Alumnos Becados</a></li>
 			<li><a href="mostrar_alumnos_no_becados.php"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Mostrar Alumnos No Becados</a></li>
-			<li><a href="mostrar_alumnos.php"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Estadistica de un Alumno Particular</a></li>
+			<li><a href="estadisticas_alumnos_becados_no.php"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Estadistica Alumnos Becados/No Becados</a></li>
 			
 
 
@@ -99,8 +99,7 @@
 				</ul>
 			</li>
 			<li role="presentation" class="divider"></li>
-			<li><a href="pdf_completo.php"><svg class="glyph stroked app-window"><use xlink:href="#stroked-app-window"></use></svg>Genenrar PDF de Alumnos </a></li>
-      <li><a href="pdf_completo_dae.php"><svg class="glyph stroked app-window"><use xlink:href="#stroked-app-window"></use></svg>Genenrar PDF de Personal DAE </a></li>
+			
 		
 
 		</ul>

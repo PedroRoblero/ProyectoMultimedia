@@ -125,34 +125,35 @@ require 'conexion_i.php';
       
           
           <div class="container">
-            <label for="" name="RUT"    >RUT:</label>
-           <form action="mostrar_alumno_buscar.php" method="post">
+            
+            <form  class="form-inline" action="mostrar_alumno_buscar.php" method="post">
+              <label class="form-inline" for="" name="RUT"    >RUT:</label>
             <input type="text" name="RUT" placeholder="RUT sin DV">
-             <input type="submit" name="name" value="Buscar" class="btn btn-success"> 
+             <input type="submit" name="name" value="Buscar" class="btn btn-success btn-xs"> 
             </form> <br>
-            <label for="" name="PROMO"    >Promocion:</label>
-            <form action="mostrar_alumno_promocion.php" method="post">
-            <input type="number" name="PROMO" placeholder="Promocion">
-             <input type="submit" name="name" value="Buscar" class="btn btn-success"> 
+            
+            <form class="form-inline" action="mostrar_alumno_promocion.php" method="post">
+              <label for="" name="PROMO"    >Promocion:</label>
+            <input type=  "number" name="PROMO" placeholder="Promocion">
+             <input type="submit" name="name" value="Buscar" class="btn btn-success btn-xs"> 
             </form> <br>
   
-            <form action="mostrar_alumno_estado.php" method="post">
+            <form class="form-inline" action="mostrar_alumno_estado.php" method="post">
             <label for="" name="estado"    >Estado:</label>
                 <input type="radio" name="estado" value="1" checked> Activo 
-                  
                   <input type="radio" name="estado" value="0"> Inactivo
-                  <input type="submit" value="Buscar" class="btn btn-success">
+                  <input type="submit" value="Buscar" class="btn btn-success btn-xs ">
             </form> <br>      
 
-          <form action="mostrar_alumno_carrera.php" method="post">
+          <form class="form-inline" action="mostrar_alumno_carrera.php" method="post">
             <label for="" name="carre"    >Carrera:</label>
             <select class="form-control" id="sel1" name="carre" >
             <option>informatica</option>
             <option>cosina</option>
             <option>artes</option>
             <option>industrial</option>
-             </select> <br>
-             <input type="submit" name="name" value="Filtrar" class="btn btn-success"> 
+             </select>
+             <input type="submit" name="name" value="Filtrar" class="btn btn-success btn-xs"> 
             </form> <br> <br>
 
   <div class="table-responsive">

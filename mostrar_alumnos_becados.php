@@ -81,7 +81,7 @@ require 'conexion_i.php';
       <li><a href="mostrar_dae_dae.php"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Mostrar Personal DAE</a></li>
       <li><a href="mostrar_alumnos_becados.php"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Mostrar Alumnos Becados</a></li>
       <li><a href="mostrar_alumnos_no_becados.php"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Mostrar Alumnos No Becados</a></li>
-      <li><a href="mostrar_alumnos.php"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Estadistica de un Alumno Particular</a></li>
+      <li><a href="estadisticas_alumnos_becados_no.php"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Estadistica Alumnos Becados/No Becados</a></li>
     
 
 
@@ -125,13 +125,13 @@ require 'conexion_i.php';
           <div class="container-fluid">
 
            <form action="mostrar_alumno_becado_buscar_dae.php" method="post">
-            <input type="text" name="RUT" placeholder="RUT sin DV">
+            <input type="text" name="RUT" placeholder="RUT sin DV" required>
              <input type="submit" name="name" value="Buscar" class="btn btn-success"> 
             </form> <br>
 
             <label for="" name="PROMO"    >Promocion:</label>
             <form action="mostrar_alumno_promocion_dae.php" method="post">
-            <input type="number" name="PROMO" placeholder="Promocion">
+            <input type="number" name="PROMO" placeholder="Promocion" required>
              <input type="submit" name="name" value="Buscar" class="btn btn-success"> 
             </form> <br>
   

@@ -75,9 +75,9 @@
 		<ul class="nav menu">
 			<li><a href="" data-toggle="modal" data-target="#myModalcasino"><svg class="glyph stroked male-user" ><use xlink:href="#stroked-male-user"></use></svg> Insertar Funcionario Casino</a></li>
 			<li><a href="mostrar_casino_casino.php"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Mostrar Funcionarios</a></li>
-			<li><a href="#"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Estadisticas Dia Actual</a></li>
-			<li><a href="#"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Estadisticas Presente Mes</a></li>
-			
+			<li><a href="estadistica_dia_actual.php"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Estadisticas Dia Actual</a></li>
+			<li><a href="calendario_casino.php"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Estadistica Dia Particular</a></li>
+			</li><li><a href="estadistica_año_actual.php"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Estadistica Año Actual</a></li>
 		
 
 
@@ -116,7 +116,7 @@
 		<div class="row">
 			<div class="col-md-8">
 			
-				<div class="container-fluid">
+				<div class="container">
 					
 						<div class="modal fade" id="myModalcasino">
     				<div class="modal-dialog modal-lg">
@@ -195,18 +195,18 @@
 				<div class="container-fluid">
 
            <form action="mostrar_casino_buscar_casino.php" method="post">
-            <input type="text" name="RUT" placeholder="RUT sin DV">
+            <input type="text" name="RUT" placeholder="RUT sin DV" required>
              <input type="submit" name="name" value="Buscar" class="btn btn-success"> 
             </form> <br>
 
 
-            <form action="mostrar_casino_cargo_casino.php" method="post">
+            <form  class="form-inline" action="mostrar_casino_cargo_casino.php" method="post">
             <label for="" name="carre"    >Cargo:</label>
             <select class="form-control" id="sel1" name="cargo" >
             <option>admin_casino</option>
             <option>funcionario</option>
             
-             </select> <br>
+             </select> 
              <input type="submit" name="name" value="Filtrar" class="btn btn-success"> 
             </form> <br> <br>
 

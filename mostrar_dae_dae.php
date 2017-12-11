@@ -81,7 +81,7 @@ require 'conexion_i.php';
       <li><a href="mostrar_dae_dae.php"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Mostrar Personal DAE</a></li>
       <li><a href="mostrar_alumnos_becados.php"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Mostrar Alumnos Becados</a></li>
       <li><a href="mostrar_alumnos_no_becados.php"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Mostrar Alumnos No Becados</a></li>
-      <li><a href="mostrar_alumnos.php"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Estadistica de un Alumno Particular</a></li>
+      <li><a href="estadisticas_alumnos_becados_no.php"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Estadistica Alumnos Becados/No Becados</a></li>
     
 
 
@@ -122,22 +122,22 @@ require 'conexion_i.php';
       <div class="col-md-8">
       
           
-          <div class="container-fluid">
+          <div class="container">
 
            <form action="mostrar_dae_buscar_dae.php" method="post">
-            <input type="text" name="RUT" placeholder="RUT sin DV">
+            <input type="text" name="RUT" placeholder="RUT sin DV" required>
              <input type="submit" name="name" value="Buscar" class="btn btn-success"> 
             </form> <br>
 
 
-            <form action="mostrar_dae_cargo_dae.php" method="post">
+            <form class="form-inline" action="mostrar_dae_cargo_dae.php" method="post">
             <label for="" name="carre"    >Cargo:</label>
             <select class="form-control" id="sel1" name="cargo" >
             <option>admin_dae</option>
             <option>secre</option>
             <option>asist_social</option>
             
-             </select> <br>
+             </select> 
              <input type="submit" name="name" value="Filtrar" class="btn btn-success"> 
             </form> <br> <br>
 

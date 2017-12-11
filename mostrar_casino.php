@@ -124,7 +124,7 @@ require 'conexion_i.php';
       <div class="col-md-8">
       
           
-          <div class="container-fluid">
+          <div class="container">
 
            <form action="mostrar_casino_buscar.php" method="post">
             <input type="text" name="RUT" placeholder="RUT sin DV">

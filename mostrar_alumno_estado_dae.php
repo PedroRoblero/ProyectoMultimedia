@@ -75,7 +75,7 @@
 			<li><a href="mostrar_dae_dae.php"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Mostrar Personal DAE</a></li>
 			<li><a href="mostrar_alumnos_becados.php"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Mostrar Alumnos Becados</a></li>
 			<li><a href="mostrar_alumnos_no_becados.php"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Mostrar Alumnos No Becados</a></li>
-			<li><a href="mostrar_alumnos.php"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Estadistica de un Alumno Particular</a></li>
+			<li><a href="estadisticas_alumnos_becados_no.php"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Estadistica Alumnos Becados/No Becados</a></li>
 			
 
 

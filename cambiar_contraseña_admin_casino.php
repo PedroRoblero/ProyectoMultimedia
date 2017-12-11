@@ -75,10 +75,9 @@
 			
 			<li><a href="" data-toggle="modal" data-target="#myModalcasino"><svg class="glyph stroked male-user" ><use xlink:href="#stroked-male-user"></use></svg> Insertar Funcionario Casino</a></li>
 			<li><a href="mostrar_casino_casino.php"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Mostrar Funcionarios</a></li>
-			<li><a href="#"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Estadisticas Dia Actual</a></li>
-			<li><a href="#"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Estadisticas Presente Mes</a></li>
-
-		
+			<li><a href="estadistica_dia_actual.php"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Estadisticas Dia Actual</a></li>
+			<li><a href="calendario_casino.php"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Estadistica Dia Particular</a></li>
+		    </li><li><a href="estadistica_año_actual.php"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Estadistica Año Actual</a></li>
 
 
 
